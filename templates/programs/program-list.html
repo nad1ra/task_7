@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programming Language</title>
+</head>
+<body>
+    <h1>Programming Language</h1>
+    {% for program in programs %}
+        <h2>{{ program.language_name }}</h2>
+    {% empty %}
+        <h2>For now there is no programs</h2>
+    {% endfor %}
+    <a href="{% url 'programs:add' %}">Add new language</a>
+</body>
+</html>
